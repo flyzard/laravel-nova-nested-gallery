@@ -10,7 +10,7 @@ composer require flyzard/nova-nested-gallery
 
 # Attach a new relationship form to a resource
 
-Simply add a NestedForm into your fields. The first parameter must be an existing NovaResource class and the second parameter (optional) must be an existing HasOneOrMany relationship in your model.
+Simply add a NestedGallery into your fields. The first parameter must be an existing NovaResource class and the second parameter (optional) must be an existing HasOneOrMany relationship in your model.
 
 ```php
 namespace App\Nova;
@@ -48,7 +48,7 @@ class User extends Resource
                 ->creationRules('required', 'string', 'min:6')
                 ->updateRules('nullable', 'string', 'min:6'),
 
-            // Add NestedForm here.
+            // Add NestedGallery here.
             NestedGallery::make('ProductPhotos'),
         ];
     }
